@@ -1,0 +1,19 @@
+{
+  "name": "HMG-Made-by-leM1ne",
+  "version": "1.0.0",
+  "description": "Discord Chat Bot",
+  "main": "node.js",
+  "scripts": {
+    "start": "index.js"
+  },
+  "dependencies": {
+    "discord.js": "12.x",
+    "express": "^4.17.1",
+    "fs": "^0.0.2",
+    "quick.db": "^7.1.1"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "license": "MIT"
+}
