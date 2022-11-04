@@ -1,3 +1,6 @@
+/*
+© Lukas Pellny 2022
+*/
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
@@ -6,7 +9,7 @@ const { token, prefix } = require('./config.json');
 
 client.on('ready', () => {
     console.log('ready')
-    client.user.setPresence({ activity: { name: "-help〡PluginCode.DE〡Globalchat" }, status: "online"})
+    client.user.setPresence({ activity: { name: "-help〡Lukas-IT Solutions" }, status: "online"})
 });
 
 
@@ -22,19 +25,19 @@ client.on('message', async message => {
       .setColor("03fc7b")
       .setTitle("**PluginCode.DE〡Globalchat Discord-Bot**")
       .setDescription("**-help**: Zeigt dir alle Befehle an.\n**-setup**: Kannst du den Channel für den Globalchat setzen!")
-      .setFooter("Made with ❤️ by ιм∂αт4ƒυη#7094")
+      .setFooter("© Lukas-IT Solutions")
       message.channel.send(help);
   }
 
   if (command === "setup") {
     const channel = message.mentions.channels.first();
-    if (!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send("<a:wrong:915644597810647111>** » Du hast keine Berechtigung dafür!**")
+    if (!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send("Unzureichende Rechte**")
     if (!channel)
       return message.channel.send(
-        "<a:wrong:915644597810647111>** » Bitte gib einen Kanal an!**"
+        "Gebe einen Kanal an**"
       );
     db.set(`g_${message.guild.id}`, `${channel.id}`);
-    message.channel.send(`<a:right:915644595579265074>** » Der Globalchat wurde in** ${channel} **gesetzt!**`);
+    message.channel.send(`Der Globalchat wurde in** ${channel} **gesetzt!**`);
   }
 });
 
