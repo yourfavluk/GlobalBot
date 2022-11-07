@@ -46,7 +46,7 @@ client.on("message", async message => {
   if (message.content.startsWith(config.prefix)) return;
   let set = db.fetch(`g_${message.guild.id}`);
   if (message.channel.id === set) {
-    const botOwnerID = 764892844909396030
+    const botOwnerID = 
     if(message.author.id == botOwnerID) {
       message.delete();
       const embed = new Discord.MessageEmbed()
